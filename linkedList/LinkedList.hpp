@@ -1,6 +1,6 @@
 /**
-*	@author 
-*	@date 
+*	@Alice Chen
+*	@8-30-2021
 *	@file LinkedList.hpp
 *	@brief Implementation file for templated LinkedList class
 */

@@ -32,7 +32,7 @@ int LinkedList<T>::size() const
 	/** TODO 
 		Fix this method
 	*/
-	return m_size;
+	return(m_size);
 }
 
 template <typename T>
@@ -41,9 +41,17 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
-	/** TODO 
-		Fix this method
-	*/
+	if (!isEmpty())
+	{
+		while(temp != nullptr && isFound == false) {
+			if (temp->getValue() == value)
+			{
+				isFound = true;
+			} else {
+				temp=temp->getNext();
+			}
+		}
+	}
 
 	return(isFound);
 }
@@ -106,6 +114,8 @@ bool LinkedList<T>::removeBack()
 	/** TODO 
 		Fix this method
 	*/
+
+	m_size--;
 
 	return(isRemoved);
 }	
